@@ -1,0 +1,12 @@
+@import "./variables";
+
+// Components
+@import "../Components/Common/button";
+@import "../Components/Sections/footer";
+@import "../Components/Sections/navbar";
+
+// Pages
+@import "../Pages/Home/home";
+@import "../Pages/FloorPlans/floorplans";
+@import "../Pages/Gallery/gallery";
+@import "../Pages/HomesAvailable/homesavailable";
