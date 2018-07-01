@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Button from "../../Component/Common/Button";
+import Button from "../../Components/Common/Button";
 
 // type Props = {
 //     backgroundURL: string,
@@ -20,7 +20,7 @@ export default class HomeSection extends Component {
     const { backgroundURL, buttonText, description, title } = this.props;
 
     return (
-      <div
+      <section
         className="homepage-section"
         style={{ backgroundImage: `url(${backgroundURL})` }}
       >
@@ -29,9 +29,9 @@ export default class HomeSection extends Component {
         <div className="homepage-section-button-box">
           <p className="homepage-section-button-box-desc">{description}</p>
 
-          <Button value={buttonText} onClick={this.navigate} />
+          <Button className="" value={buttonText} onClick={this.navigate} />
         </div>
-      </div>
+      </section>
     );
   }
 

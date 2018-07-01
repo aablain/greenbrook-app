@@ -1,0 +1,260 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0px;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+header {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  // height: 100vh;
+  height: 600px;
+  max-height: 100vh;
+  background-color: #555;
+  // background-image: url("../images/house_with_flowers.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .header-title-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -130px;
+    font-family: "Playball", cursive;
+    h1 {
+      font-size: 6.3rem;
+      margin: 0px;
+      width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+      color: $white;
+      text-align: center;
+    }
+    h5 {
+      color: $white;
+      text-align: center;
+      width: 100%;
+      min-width: 100%;
+      margin: 0px;
+      margin-top: -25px;
+    }
+  }
+  @media #{$mobile} {
+    .header-titleBox {
+      h1 {
+        font-size: 4.4rem;
+      }
+      h5 {
+        margin-top: -15px;
+      }
+    }
+  }
+  @media #{$smallPhone} {
+    .header-titleBox {
+      h1 {
+        font-size: 4rem;
+      }
+      h5 {
+        margin-top: -15px;
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $greenThree;
+  span {
+    font-family: "Playball", cursive;
+    font-size: 1.6rem;
+    padding-left: 25px;
+    color: $white;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 480px;
+    padding-right: 25px;
+    font-family: "Oswald", sans-serif;
+    margin: 0px;
+    a {
+      text-decoration: none;
+      li {
+        list-style: none;
+        color: $white;
+        font-size: 1.3rem;
+        padding: 16px 25px;
+        transition: background-color 220ms ease-in-out;
+        &:hover {
+          background-color: $green;
+        }
+      }
+    }
+  }
+  @media #{$tablet} {
+    justify-content: center;
+    span {
+      font-size: 2.1rem;
+      padding: 10px;
+    }
+    ul {
+      display: none;
+    }
+  }
+}
+
+.homepage-sections {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  section.homepage-section {
+    flex-basis: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .homepage-section-title {
+      font-size: 4.5rem;
+      text-shadow: 0px 0px 15px $dark-transparent;
+      margin: 0px;
+      color: $white;
+      font-family: "Playball", sans-serif;
+      text-align: center;
+    }
+    .homepage-section-button-box {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .homepage-section-button-box-desc {
+        margin: 0px;
+        font-size: 1.2rem;
+        color: $white;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+        text-shadow: 0px 0px 8px $dark-transparent;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    &:first-of-type {
+      // background-image: url("../images/spanish_house.jpeg");
+    }
+    &:nth-of-type(2) {
+      // background-image: url("../images/home_construction.jpeg");
+      * {
+        color: $tan;
+        border-color: $tan;
+      }
+      .button:hover {
+        background-color: $tan-transparent;
+      }
+      span {
+        text-shadow: 0px 0px 15px $dark-transparent;
+      }
+    }
+    &:nth-of-type(3) {
+      // background-image: url("../images/house_window.jpeg");
+      // * {
+      //   color: $light-blue;
+      //   border-color: $light-blue;
+      // }
+      .button:hover {
+        background-color: $light-blue-transparent;
+      }
+      h1 {
+        color: $light-blue;
+      }
+      p {
+        color: $white;
+      }
+      span {
+        text-shadow: 0px 0px 15px $dark-transparent;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 110px;
+  padding: 35px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  h5 {
+    color: $greenThree;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    span {
+      color: $greenThree;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.button {
+  font-size: 1.8rem;
+  color: $white;
+  padding: 10px 16px;
+  border: 2px solid $white;
+  border-radius: 8px;
+  transition: background-color 220ms ease-in-out;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+    // color: $greenThree;
+  }
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 0px 15px $dark-transparent;
+}
+
+.padding-bottom {
+  height: 664px;
+}
