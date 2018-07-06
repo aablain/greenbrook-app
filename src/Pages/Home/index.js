@@ -20,21 +20,25 @@ export default class Home extends Component {
           <HomeSection
             buttonText="See Homes Available"
             description="Your dream home is waiting for you."
+            linkPath="homesavilable"
             title="Homes Available"
           />
           <HomeSection
             buttonText="Browse Floor Plans"
             description="Find the House you see yourself in."
+            linkPath="floorplans"
             title="Floor Plans"
           />
           <HomeSection
             buttonText="View Gallery"
             description="Take a look at homes others have already snagged."
+            linkPath="gallery"
             title="Gallery"
           />
           <HomeSection
             buttonText="Read Our Story"
             description="Learn about what makes Greenbrook unique."
+            linkPath="about"
             title="About Us"
           />
         </div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Button from "../../Components/Common/Button";
 
@@ -6,6 +7,7 @@ import Button from "../../Components/Common/Button";
 //     backgroundURL: string,
 //     buttonText: string,
 //     description: string,
+//     linkPath: string,
 //     title: string,
 // };
 
@@ -17,7 +19,13 @@ export default class HomeSection extends Component {
   }
 
   render() {
-    const { backgroundURL, buttonText, description, title } = this.props;
+    const {
+      backgroundURL,
+      buttonText,
+      description,
+      linkPath,
+      title
+    } = this.props;
 
     return (
       <section
@@ -29,7 +37,9 @@ export default class HomeSection extends Component {
         <div className="homepage-section-button-box">
           <p className="homepage-section-button-box-desc">{description}</p>
 
-          <Button className="" value={buttonText} onClick={this.navigate} />
+          <Link to={`/${linkPath}`}>
+            <Button className="" value={buttonText} onClick={this.navigate} />
+          </Link>
         </div>
       </section>
     );

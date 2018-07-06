@@ -2,10 +2,16 @@
   padding: 10px 16px;
   font-size: 1.8rem;
   color: #ffffff;
+  background-color: transparent;
   padding: 10px 16px;
   border: 2px solid #ffffff;
   border-radius: 8px;
   transition: background-color 220ms ease-in-out;
+  font-family: "Oswald", sans-serif;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &:focus,
   &:active {
