@@ -20,7 +20,7 @@ export default class Home extends Component {
           <HomeSection
             buttonText="See Homes Available"
             description="Your dream home is waiting for you."
-            linkPath="homesavilable"
+            linkPath="homesavailable"
             title="Homes Available"
           />
           <HomeSection

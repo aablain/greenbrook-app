@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Routes from "./Routes";
 
-import logo from "./logo.svg";
 import "./Styles/Styles.css";
 
 class App extends Component {
