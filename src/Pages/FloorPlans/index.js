@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import NavBar from "../../Components/Sections/NavBar";
+// import NavBar from "../../Components/Sections/NavBar";
 
 export default class FloorPlans extends Component {
   constructor(props) {

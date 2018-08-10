@@ -9,6 +9,10 @@
   transition: background-color 220ms ease-in-out;
   font-family: "Oswald", sans-serif;
 
+  &.disabled {
+    opacity: 0.4;
+  }
+
   &:hover {
     cursor: pointer;
   }

@@ -1,3 +1,9 @@
+.homes-available-homes .home-available, .new-home .new-home-save-button-cont {
+  flex-basis: 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%; }
+
 @font-face {
   font-family: "Playball";
   src: url("../fonts/Playball/Playball-Regular.ttf"); }
@@ -14,10 +20,88 @@
   border-radius: 8px;
   transition: background-color 220ms ease-in-out;
   font-family: "Oswald", sans-serif; }
+  .cc-button.disabled {
+    opacity: 0.4; }
   .cc-button:hover {
     cursor: pointer; }
   .cc-button:focus, .cc-button:active {
     outline: none; }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 1; } }
+@keyframes swell {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.04); }
+  100% {
+    transform: scale(1); } }
+.loading-cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #196f3d; }
+  .loading-cont .loading-trees {
+    margin-top: -50px;
+    max-width: 100px;
+    max-height: 105px;
+    animation: swell 2000ms ease-in-out; }
+  .loading-cont .loading-text {
+    font-family: "Playball", sans-serif;
+    font-size: 40px;
+    margin: 0px;
+    display: none; }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #196f3d;
+  position: sticky;
+  top: 0px; }
+  nav span {
+    font-family: "Playball", cursive;
+    font-size: 1.6rem;
+    padding-left: 25px;
+    color: #ffffff; }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 480px;
+    padding-right: 25px;
+    font-family: "Oswald", sans-serif;
+    margin: 0px; }
+    nav ul a {
+      text-decoration: none; }
+      nav ul a li {
+        list-style: none;
+        color: #ffffff;
+        font-size: 1.3rem;
+        padding: 16px 25px;
+        transition: background-color 220ms ease-in-out; }
+        nav ul a li:hover {
+          background-color: #214e34; }
+  @media screen and (max-width: 705px) {
+    nav {
+      justify-content: center; }
+      nav span {
+        font-size: 2.1rem;
+        padding: 10px; }
+      nav ul {
+        display: none; } }
 
 body {
   min-height: 100vh;
@@ -71,47 +155,6 @@ header {
       font-size: 4rem; }
     header .header-titleBox h5 {
       margin-top: -15px; } }
-
-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #196f3d; }
-  nav span {
-    font-family: "Playball", cursive;
-    font-size: 1.6rem;
-    padding-left: 25px;
-    color: #ffffff; }
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 480px;
-    padding-right: 25px;
-    font-family: "Oswald", sans-serif;
-    margin: 0px; }
-    nav ul a {
-      text-decoration: none; }
-      nav ul a li {
-        list-style: none;
-        color: #ffffff;
-        font-size: 1.3rem;
-        padding: 16px 25px;
-        transition: background-color 220ms ease-in-out; }
-        nav ul a li:hover {
-          background-color: #214e34; }
-  @media screen and (max-width: 705px) {
-    nav {
-      justify-content: center; }
-      nav span {
-        font-size: 2.1rem;
-        padding: 10px; }
-      nav ul {
-        display: none; } }
 
 .homepage-sections {
   width: 100%;
@@ -219,5 +262,190 @@ footer {
 
 .padding-bottom {
   height: 664px; }
+
+.homes-available-banner {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 300px;
+  max-height: 100vh;
+  background-color: #555;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .homes-available-banner .header-title-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -60px;
+    font-family: "Playball", cursive; }
+    .homes-available-banner .header-title-box .homes-available-banner-title {
+      font-size: 6.3rem;
+      margin: 0px;
+      width: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      text-align: center;
+      color: #ffffff;
+      text-align: center; }
+    .homes-available-banner .header-title-box .homes-available-banner-description {
+      color: #ffffff;
+      text-align: center;
+      width: 100%;
+      min-width: 100%;
+      margin: 0px;
+      margin-top: -25px; }
+
+.homes-available-homes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .homes-available-homes .home-available {
+    min-height: 450px; }
+
+.home-available-nav-button {
+  color: black;
+  border-color: black; }
+
+.home-available-page {
+  margin: 0px auto;
+  padding: 30px 50px 40px;
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  box-sizing: border-box; }
+  .home-available-page .home-available-page-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto, 550px) minmax(100px, auto) auto; }
+    .home-available-page .home-available-page-content .home-available-page-content-main-photo {
+      overflow: hidden; }
+      .home-available-page .home-available-page-content .home-available-page-content-main-photo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: scale-down; }
+    .home-available-page .home-available-page-content .home-available-page-content-photos {
+      padding-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 100px);
+      grid-template-rows: repeat(auto-fit, 100px);
+      grid-auto-rows: 100px;
+      grid-gap: 10px;
+      justify-content: center; }
+      .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo {
+        overflow: hidden; }
+        .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo img {
+          max-width: 100%;
+          min-height: 100%;
+          object-fit: cover; }
+        .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo.selected-image {
+          position: relative; }
+          .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo.selected-image::before {
+            position: absolute;
+            content: "Viewing";
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            background-color: rgba(31, 110, 63, 0.85);
+            color: #fff;
+            z-index: 10;
+            font-family: "Oswald", sans-serif;
+            font-size: 18px; }
+        .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo:hover {
+          cursor: pointer; }
+  .home-available-page .home-available-banner-title {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 36px;
+    font-family: "Oswald", sans-serif; }
+  .home-available-page .home-available-banner-desc {
+    margin: 0px;
+    padding: 40px 0px;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px; }
+
+.new-home {
+  padding: 50px 0px;
+  min-height: 100vh; }
+  .new-home .new-home-drop-zone {
+    margin: 0px auto;
+    width: 200px;
+    height: 100px;
+    border: 2px dashed black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .new-home .new-home-previews-cont {
+    margin: 0px auto;
+    padding: 40px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    max-width: 1000px; }
+    .new-home .new-home-previews-cont .image-preview {
+      padding: 0px 5px;
+      display: flex;
+      flex-direction: column;
+      transition: margin 220ms ease-in-out; }
+      .new-home .new-home-previews-cont .image-preview .image-preview-close-btn {
+        text-align: right; }
+      .new-home .new-home-previews-cont .image-preview .image-preview-image {
+        max-height: 175px;
+        max-width: 175px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6); }
+  .new-home .new-home-inputs-cont {
+    padding: 25px 0px 60px; }
+  .new-home .new-home-input-cont {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .new-home .new-home-input-cont .new-home-input {
+      padding: 6px;
+      font-size: 22px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      transition: border 180ms ease-in-out;
+      width: 400px; }
+      .new-home .new-home-input-cont .new-home-input:focus {
+        border-bottom-color: black;
+        border-bottom-width: 2px; }
+    .new-home .new-home-input-cont .new-home-input-header {
+      text-align: center; }
+    .new-home .new-home-input-cont .new-home-input-button {
+      margin-left: 10px;
+      padding: 8px 30px;
+      border: 1px solid darkgrey;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+  .new-home .new-home-save-button-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .new-home .new-home-save-button-cont .new-home-button {
+      color: black;
+      border-color: black;
+      min-width: 200px; }
 
 /*# sourceMappingURL=Styles.css.map */

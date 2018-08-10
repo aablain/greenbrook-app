@@ -1,0 +1,101 @@
+.new-home {
+  padding: 50px 0px;
+  min-height: 100vh;
+
+  .new-home-drop-zone {
+    margin: 0px auto;
+    width: 200px;
+    height: 100px;
+    border: 2px dashed black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .new-home-previews-cont {
+    margin: 0px auto;
+    padding: 40px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    max-width: 1000px;
+
+    .image-preview {
+      padding: 0px 5px;
+      display: flex;
+      flex-direction: column;
+      transition: margin 220ms ease-in-out;
+
+      .image-preview-close-btn {
+        text-align: right;
+      }
+
+      .image-preview-image {
+        max-height: 175px;
+        max-width: 175px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .new-home-inputs-cont {
+    padding: 25px 0px 60px;
+  }
+
+  .new-home-input-cont {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .new-home-input {
+      padding: 6px;
+      font-size: 22px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      transition: border 180ms ease-in-out;
+      width: 400px;
+
+      &:focus {
+        border-bottom-color: rgba(0, 0, 0, 1);
+        border-bottom-width: 2px;
+      }
+    }
+
+    .new-home-input-header {
+      text-align: center;
+    }
+
+    .new-home-input-text {
+    }
+
+    .new-home-input-button {
+      margin-left: 10px;
+      padding: 8px 30px;
+      border: 1px solid darkgrey;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .new-home-save-button-cont {
+    @extend %full-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .new-home-button {
+      color: black;
+      border-color: black;
+      min-width: 200px;
+    }
+  }
+}

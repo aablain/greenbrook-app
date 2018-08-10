@@ -1,15 +1,40 @@
 import React, { Component } from "react";
+import { base } from "../../fire";
 
 import HomeBanner from "./HomeBanner";
 import HomeSection from "./HomeSection";
 import NavBar from "../../Components/Sections/NavBar";
+import Loading from "../../Components/Common/Loading";
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      home: {},
+      loading: true
+    };
+  }
+
+  componentWillMount() {
+    this.homeRef = base.bindToState("home", {
+      context: this,
+      state: "home",
+      then: () => {
+        this.setState({ loading: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    base.removeBinding(this.homeRef);
   }
 
   render() {
+    if (this.state.loading) {
+      return <Loading />;
+    }
+
     return (
       <div className="homepage">
         <HomeBanner />

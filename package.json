@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
+    "cloudinary-react": "^1.0.6",
     "firebase": "^5.2.0",
     "firebase-admin": "^5.12.1",
+    "image-compressor.js": "^1.1.4",
+    "lodash": "^4.17.10",
+    "re-base": "^3.2.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-dropzone": "^4.2.13",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },

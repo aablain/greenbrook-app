@@ -21,6 +21,15 @@ $tablet: "screen and (max-width: 705px)";
 $mobile: "screen and (max-width: 515px)";
 $smallPhone: "screen and (max-width: 335px)";
 
+// Extentions ---------------
+
+%full-width {
+  flex-basis: 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
 // Misc ---------------------
 
 @font-face {
