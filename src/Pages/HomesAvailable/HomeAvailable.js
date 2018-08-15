@@ -21,12 +21,16 @@ export default class HomeAvailable extends Component {
 
     const images = home.images && _.map(home.images, img => img);
 
-    return (
-      <section className="home-available">
-        <div className="header-title-box">
-          <h1 className="home-available-banner-title">{home.address}</h1>
+    const path = `url(http://res.cloudinary.com/${
+      process.env.REACT_APP_CLOUDINARY_CLOUD_NAME
+    }/image/upload/c_scale,w_1000/${images[0]})`;
 
-          {home.images &&
+    return (
+      <section className="homes-available-home">
+        <div className="header-title-box" style={{ backgroundImage: path }}>
+          <h1 className="homes-available-home-banner-title">{home.address}</h1>
+
+          {/* {home.images &&
             images.length && (
               <Image
                 cloudName={process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}
@@ -34,11 +38,11 @@ export default class HomeAvailable extends Component {
                 publicId={images[0]}
                 width={1000}
               />
-            )}
+            )} */}
 
           <Link to={`/homesavailable/${this.props.idx}`}>
             <Button
-              className="home-available-nav-button"
+              className="homes-available-home-nav-button"
               onClick={() => {}}
               value="View Home"
             />

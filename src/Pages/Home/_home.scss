@@ -1,3 +1,5 @@
+@import "../../Styles/variables";
+
 body {
   min-height: 100vh;
   min-width: 100vw;
@@ -37,6 +39,10 @@ header {
       text-align: center;
       color: $white;
       text-align: center;
+
+      @media screen and (max-width: 480px) {
+        font-size: 36px;
+      }
     }
     h5 {
       color: $white;
@@ -47,7 +53,7 @@ header {
       margin-top: -25px;
     }
   }
-  @media #{$mobile} {
+  @media screena and (max-width: 480px) {
     .header-titleBox {
       h1 {
         font-size: 4.4rem;
@@ -185,6 +191,9 @@ footer {
       text-align: center;
     }
   }
+}
+
+.homepage-banner-title {
 }
 
 .button {

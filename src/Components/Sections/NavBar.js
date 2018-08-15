@@ -1,17 +1,32 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import cx from "classnames";
 
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showButtons: false
+    };
+
+    this.toggleNavBar = this.toggleNavBar.bind(this);
   }
 
   render() {
-    return (
-      <nav className="navbar">
-        <span className="navbar-title">Greenbrook</span>
+    const { showButtons } = this.state;
 
-        <ul>
+    return (
+      <nav className={cx("navbar", showButtons && "grow-full-screen")}>
+        <span
+          className="navbar-title"
+          onClick={this.toggleNavBar}
+          role="button"
+        >
+          Greenbrook
+        </span>
+
+        <ul className={cx(showButtons && "reveal")}>
           <Link to="/" className="navbar-link">
             <li>Home</li>
           </Link>
@@ -30,5 +45,9 @@ export default class NavBar extends Component {
         </ul>
       </nav>
     );
+  }
+
+  toggleNavBar() {
+    this.setState({ showButtons: !this.state.showButtons });
   }
 }

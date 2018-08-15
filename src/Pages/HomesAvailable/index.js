@@ -73,11 +73,11 @@ export default class HomesAvailable extends Component {
         <HomesAvailableBanner />
 
         <div className="homes-available-homes">
-          <div>
+          {/* <div>
             <Link to={"/newhome"}>
               <Button onClick={() => {}} value="Create New Home" />
             </Link>
-          </div>
+          </div> */}
 
           {this.state.homes &&
             _.map(this.state.homes, (home, idx) => (
