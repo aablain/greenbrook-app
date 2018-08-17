@@ -10,6 +10,8 @@ export default class HomeAvailable extends Component {
     super(props);
 
     this.state = {};
+
+    this.createURL = this.createURL.bind(this);
   }
 
   render() {
@@ -21,9 +23,7 @@ export default class HomeAvailable extends Component {
 
     const images = home.images && _.map(home.images, img => img);
 
-    const path = `url(http://res.cloudinary.com/${
-      process.env.REACT_APP_CLOUDINARY_CLOUD_NAME
-    }/image/upload/c_scale,w_1000/${images[0]})`;
+    const path = this.createURL(images[0]);
 
     return (
       <section className="homes-available-home">
@@ -50,5 +50,11 @@ export default class HomeAvailable extends Component {
         </div>
       </section>
     );
+  }
+
+  createURL(imageID) {
+    return `url(http://res.cloudinary.com/${
+      process.env.REACT_APP_CLOUDINARY_CLOUD_NAME
+    }/image/upload/c_scale,w_1000/${imageID})`;
   }
 }

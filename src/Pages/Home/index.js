@@ -4,6 +4,7 @@ import { base } from "../../fire";
 import HomeBanner from "./HomeBanner";
 import HomeSection from "./HomeSection";
 import NavBar from "../../Components/Sections/NavBar";
+import Footer from "../../Components/Sections/Footer";
 import Loading from "../../Components/Common/Loading";
 
 export default class Home extends Component {
@@ -67,6 +68,8 @@ export default class Home extends Component {
             title="About Us"
           />
         </div>
+
+        <Footer />
       </div>
     );
   }

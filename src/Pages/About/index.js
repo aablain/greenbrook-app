@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-// import NavBar from "../../Components/Sections/NavBar";
+import NavBar from "../../Components/Sections/NavBar";
+import Banner from "../../Components/Sections/Banner";
+import Footer from "../../Components/Sections/Footer";
 
 export default class About extends Component {
   constructor(props) {
@@ -8,6 +10,13 @@ export default class About extends Component {
   }
 
   render() {
-    return <div className="about">About</div>;
+    return (
+      <div className="about">
+        <Banner title="About" color="#f4debc" />
+        <NavBar />
+
+        <Footer />
+      </div>
+    );
   }
 }

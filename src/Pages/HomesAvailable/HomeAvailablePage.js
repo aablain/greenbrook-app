@@ -39,27 +39,29 @@ export default class HomeAvailablePage extends Component {
             />
           </div>
 
-          <div className="home-available-page-content-photos">
-            {home.images &&
-              images.length &&
-              images.map((img, idx) => (
-                <div
-                  className={cx(
-                    "home-available-page-content-photo",
-                    this.state.mainImage === img && "selected-image"
-                  )}
-                  key={img}
-                >
-                  <Image
-                    cloudName={process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}
-                    crop="scale"
-                    publicId={img}
-                    key={idx + 1}
-                    width={100}
-                    onClick={() => this.choosePhoto(img)}
-                  />
-                </div>
-              ))}
+          <div className="home-available-page-content-photos-cont">
+            <div className="home-available-page-content-photos">
+              {home.images &&
+                images.length &&
+                images.map((img, idx) => (
+                  <div
+                    className={cx(
+                      "home-available-page-content-photo",
+                      this.state.mainImage === img && "selected-image"
+                    )}
+                    key={img}
+                  >
+                    <Image
+                      cloudName={process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}
+                      crop="scale"
+                      publicId={img}
+                      key={idx + 1}
+                      width={100}
+                      onClick={() => this.choosePhoto(img)}
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
 
           <h1 className="home-available-banner-title">{home.address}</h1>

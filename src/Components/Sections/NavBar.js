@@ -42,6 +42,10 @@ export default class NavBar extends Component {
           <Link to="/gallery">
             <li>Gallery</li>
           </Link>
+
+          <Link to="/about">
+            <li>About</li>
+          </Link>
         </ul>
       </nav>
     );

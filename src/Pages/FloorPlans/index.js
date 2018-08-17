@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-// import NavBar from "../../Components/Sections/NavBar";
+import NavBar from "../../Components/Sections/NavBar";
+import Banner from "../../Components/Sections/Banner";
+import Footer from "../../Components/Sections/Footer";
 
 export default class FloorPlans extends Component {
   constructor(props) {
@@ -8,6 +10,13 @@ export default class FloorPlans extends Component {
   }
 
   render() {
-    return <div className="floorplans">Floor Plans</div>;
+    return (
+      <div className="floorplans">
+        <Banner title="Floor Plans" color="#1f6e3f" />
+        <NavBar />
+
+        <Footer />
+      </div>
+    );
   }
 }

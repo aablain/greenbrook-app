@@ -18,6 +18,7 @@ nav {
     color: $white;
   }
   ul {
+    padding-left: 0px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -27,6 +28,14 @@ nav {
     padding-right: 25px;
     font-family: "Oswald", sans-serif;
     margin: 0px;
+
+    @media screen and (max-width: 490px) {
+      padding-left: 0px;
+      padding-right: 0px;
+      min-width: auto;
+      width: 100%;
+    }
+
     a {
       text-decoration: none;
       li {
@@ -35,6 +44,7 @@ nav {
         font-size: 1.3rem;
         padding: 16px 25px;
         transition: background-color 220ms ease-in-out;
+
         &:hover {
           background-color: $green;
         }

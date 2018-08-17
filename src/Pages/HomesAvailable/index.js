@@ -8,7 +8,9 @@ import HomeAvailable from "./HomeAvailable";
 import HomeAvailablePage from "./HomeAvailablePage";
 
 import Button from "../../Components/Common/Button";
-// import NavBar from "../../Components/Sections/NavBar";
+import Banner from "../../Components/Sections/Banner";
+import NavBar from "../../Components/Sections/NavBar";
+import Footer from "../../Components/Sections/Footer";
 import Loading from "../../Components/Common/Loading";
 
 export default class HomesAvailable extends Component {
@@ -70,7 +72,8 @@ export default class HomesAvailable extends Component {
 
     return (
       <div className="homes-available">
-        <HomesAvailableBanner />
+        <Banner title="Homes Available" color="#1f6e3f" />
+        <NavBar />
 
         <div className="homes-available-homes">
           {/* <div>
@@ -84,6 +87,8 @@ export default class HomesAvailable extends Component {
               <HomeAvailable key={idx} idx={idx} home={home} />
             ))}
         </div>
+
+        <Footer />
       </div>
     );
   }

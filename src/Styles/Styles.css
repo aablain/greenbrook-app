@@ -78,6 +78,7 @@ nav {
     padding-left: 25px;
     color: #ffffff; }
   nav ul {
+    padding-left: 0px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -87,6 +88,12 @@ nav {
     padding-right: 25px;
     font-family: "Oswald", sans-serif;
     margin: 0px; }
+    @media screen and (max-width: 490px) {
+      nav ul {
+        padding-left: 0px;
+        padding-right: 0px;
+        min-width: auto;
+        width: 100%; } }
     nav ul a {
       text-decoration: none; }
       nav ul a li {
@@ -162,7 +169,7 @@ header {
   min-width: 100%;
   max-width: 100%;
   height: 600px;
-  max-height: 100vh;
+  max-height: calc(100vh - 62px);
   background-color: #555;
   background-size: cover;
   background-repeat: no-repeat;
@@ -177,6 +184,9 @@ header {
     margin-right: auto;
     margin-top: -130px;
     font-family: "Playball", cursive; }
+    @media screen and (max-width: 480px) {
+      header .header-title-box {
+        margin-top: -80px; } }
     header .header-title-box h1 {
       font-size: 6.3rem;
       margin: 0px;
@@ -187,7 +197,7 @@ header {
       text-align: center; }
       @media screen and (max-width: 480px) {
         header .header-title-box h1 {
-          font-size: 36px; } }
+          font-size: 48px; } }
     header .header-title-box h5 {
       color: #ffffff;
       text-align: center;
@@ -195,6 +205,9 @@ header {
       min-width: 100%;
       margin: 0px;
       margin-top: -25px; }
+      @media screen and (max-width: 480px) {
+        header .header-title-box h5 {
+          margin-top: -13px; } }
   @media screena and (max-width: 480px) {
     header .header-titleBox h1 {
       font-size: 4.4rem; }
@@ -271,8 +284,7 @@ footer {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  height: 110px;
-  padding: 35px 10px;
+  padding: 20px 10px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,7 +331,7 @@ footer {
   max-width: 100%;
   height: 300px;
   max-height: 100vh;
-  background-color: #555;
+  background-color: #1f6e3f;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -335,10 +347,10 @@ footer {
   .homes-available-banner .header-title-box {
     margin-left: auto;
     margin-right: auto;
-    margin-top: -60px;
+    margin-top: 0px;
     font-family: "Playball", cursive; }
     .homes-available-banner .header-title-box .homes-available-banner-title {
-      font-size: 6.3rem;
+      font-size: 101px;
       margin: 0px;
       width: 100%;
       -ms-flex-preferred-size: 100%;
@@ -346,6 +358,9 @@ footer {
       text-align: center;
       color: #ffffff;
       text-align: center; }
+      @media screen and (max-width: 480px) {
+        .homes-available-banner .header-title-box .homes-available-banner-title {
+          font-size: 60px; } }
     .homes-available-banner .header-title-box .homes-available-banner-description {
       color: #ffffff;
       text-align: center;
@@ -355,11 +370,13 @@ footer {
       margin-top: -25px; }
 
 .homes-available-homes {
+  margin: 0px auto;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 1200px; }
   .homes-available-homes .home-available {
     min-height: 450px; }
 
@@ -371,29 +388,56 @@ footer {
   margin: 0px auto;
   padding: 30px 50px 40px;
   width: 100%;
-  max-width: 1050px;
-  display: grid;
-  box-sizing: border-box; }
+  max-width: 1050px; }
+  @media screen and (max-width: 480px) {
+    .home-available-page {
+      padding: 20px 20px 40px; } }
   .home-available-page .home-available-page-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(auto, 550px) minmax(100px, auto) auto; }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
     .home-available-page .home-available-page-content .home-available-page-content-main-photo {
-      overflow: hidden; }
+      overflow: hidden;
+      max-height: 550px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      @media screen and (max-width: 480px) {
+        .home-available-page .home-available-page-content .home-available-page-content-main-photo {
+          max-height: 350px; } }
       .home-available-page .home-available-page-content .home-available-page-content-main-photo img {
         max-width: 100%;
         max-height: 100%;
         object-fit: scale-down; }
+    .home-available-page .home-available-page-content .home-available-page-content-photos-cont {
+      display: flex;
+      flex-direction: row; }
     .home-available-page .home-available-page-content .home-available-page-content-photos {
+      margin: 0px auto;
       padding-top: 10px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 100px);
-      grid-template-rows: repeat(auto-fit, 100px);
-      grid-auto-rows: 100px;
-      grid-gap: 10px;
-      justify-content: center; }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start; }
+      @media screen and (max-width: 480px) {
+        .home-available-page .home-available-page-content .home-available-page-content-photos {
+          justify-content: flex-start;
+          overflow-x: auto;
+          flex-wrap: nowrap; } }
       .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo {
-        overflow: hidden; }
+        margin: 0px 5px 5px;
+        overflow: hidden;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        max-width: 100px;
+        min-height: 100px; }
+        @media screen and (max-width: 480px) {
+          .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo:first-of-type {
+            margin-left: 0px; } }
         .home-available-page .home-available-page-content .home-available-page-content-photos .home-available-page-content-photo img {
           max-width: 100%;
           min-height: 100%;
@@ -435,6 +479,8 @@ footer {
   flex-wrap: wrap;
   flex-basis: 100%;
   width: 100%; }
+  .homes-available-home:last-of-type {
+    margin-bottom: 0px; }
   .homes-available-home .header-title-box {
     padding: 20px;
     height: 500px;
@@ -449,6 +495,9 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center; }
+    @media screen and (max-width: 480px) {
+      .homes-available-home .header-title-box {
+        height: 350px; } }
   .homes-available-home .homes-available-home-banner-title {
     margin: 0px;
     width: 100%;
