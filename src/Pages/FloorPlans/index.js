@@ -12,7 +12,7 @@ export default class FloorPlans extends Component {
   render() {
     return (
       <div className="floorplans">
-        <Banner title="Floor Plans" color="#1f6e3f" />
+        <Banner title="Floor Plans" color="#f4debc" />
         <NavBar />
 
         <Footer />

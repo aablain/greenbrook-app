@@ -12,7 +12,7 @@ export default class About extends Component {
   render() {
     return (
       <div className="about">
-        <Banner title="About" color="#f4debc" />
+        <Banner title="About" color="" />
         <NavBar />
 
         <Footer />
