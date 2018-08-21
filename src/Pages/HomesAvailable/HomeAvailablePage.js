@@ -3,6 +3,8 @@ import cx from "classnames";
 import _ from "lodash";
 import { Image } from "cloudinary-react";
 
+import NavBar from "../../Components/Sections/NavBar";
+
 export default class HomeAvailablePage extends Component {
   constructor(props) {
     super(props);
@@ -25,9 +27,7 @@ export default class HomeAvailablePage extends Component {
 
     return (
       <section className="home-available-page">
-        {/* <div className="header-title-box">
-        
-        </div> */}
+        <NavBar />
 
         <div className="home-available-page-content">
           <div className="home-available-page-content-main-photo">

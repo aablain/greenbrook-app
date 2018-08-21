@@ -30,16 +30,6 @@ export default class HomeAvailable extends Component {
         <div className="header-title-box" style={{ backgroundImage: path }}>
           <h1 className="homes-available-home-banner-title">{home.address}</h1>
 
-          {/* {home.images &&
-            images.length && (
-              <Image
-                cloudName={process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}
-                crop="scale"
-                publicId={images[0]}
-                width={1000}
-              />
-            )} */}
-
           <Link to={`/homesavailable/${this.props.idx}`}>
             <Button
               className="homes-available-home-nav-button"

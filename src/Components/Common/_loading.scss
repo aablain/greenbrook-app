@@ -31,11 +31,13 @@
   align-items: center;
   background-color: #196f3d;
 
-  .loading-trees {
+  .loading-trees,
+  .loading-logo-trees {
     margin-top: -50px;
     max-width: 100px;
     max-height: 105px;
     animation: swell 2000ms ease-in-out;
+    fill: #fff;
   }
 
   .loading-text {

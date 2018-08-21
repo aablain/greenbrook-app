@@ -10,6 +10,7 @@ nav {
   min-height: 62px;
   max-height: 62px;
   transition: max-height 500ms ease-in-out;
+  z-index: 15;
 
   span {
     font-family: "Playball", cursive;
