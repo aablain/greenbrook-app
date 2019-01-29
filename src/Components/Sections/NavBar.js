@@ -18,35 +18,37 @@ export default class NavBar extends Component {
 
     return (
       <nav className={cx("navbar", showButtons && "grow-full-screen")}>
-        <span
-          className="navbar-title"
-          onClick={this.toggleNavBar}
-          role="button"
-        >
-          Greenbrook
-        </span>
+        <div className="navbar-inner-cont">
+          <span
+            className="navbar-title"
+            onClick={this.toggleNavBar}
+            role="button"
+          >
+            Greenbrook
+          </span>
 
-        <ul className={cx(showButtons && "reveal")}>
-          <Link to="/" className="navbar-link">
-            <li>Home</li>
-          </Link>
+          <ul className={cx(showButtons && "reveal")}>
+            <Link to="/" className="navbar-link">
+              <li>Home</li>
+            </Link>
 
-          <Link to="/homesavailable">
-            <li>Homes Available</li>
-          </Link>
+            <Link to="/homesavailable">
+              <li>Homes Available</li>
+            </Link>
 
-          <Link to="/floorplans">
-            <li>Floor Plans</li>
-          </Link>
+            <Link to="/floorplans">
+              <li>Floor Plans</li>
+            </Link>
 
-          <Link to="/gallery">
-            <li>Gallery</li>
-          </Link>
+            <Link to="/gallery">
+              <li>Gallery</li>
+            </Link>
 
-          <Link to="/about">
-            <li>About</li>
-          </Link>
-        </ul>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
+          </ul>
+        </div>
       </nav>
     );
   }

@@ -2,7 +2,7 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: $greenThree;
   position: sticky;
@@ -11,6 +11,21 @@ nav {
   max-height: 62px;
   transition: max-height 500ms ease-in-out;
   z-index: 15;
+
+  .navbar-inner-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+
+    @media screen and (max-width: 765px) {
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
 
   span {
     font-family: "Playball", cursive;
