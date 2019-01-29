@@ -1,0 +1,38 @@
+.about-page-wrapper {
+  margin: 0px auto;
+  padding-top: 40px;
+  width: 100%;
+  max-width: 850px;
+  min-height: 500px;
+}
+
+.about-page-paragraph-cont {
+  padding: 20px 0px;
+  margin-bottom: 40px;
+  animation: fadeInFromLeft 600ms ease-in-out 1;
+}
+
+.about-page-title {
+  margin: 0px;
+  padding-bottom: 20px;
+  font-size: 38px;
+  font-family: "Oswald", sans-serif;
+  //   font-family: "Playball", cursive;
+}
+
+.about-page-paragraph {
+  margin: 0px;
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
